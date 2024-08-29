@@ -37,7 +37,8 @@ if __name__ == "__main__":
     # image_path='external_Test/CF1ze.jpg'
     # image_path='external_Test/images.png'
     # image_path='external_Test/0_kKxxK1YXSyWMEBtS.png'
-    image_path = 'external_Test/5.png' t
+    # image_path = 'external_Test/5.png' 
+    image_path = 'external_Test/images7.png'
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     if not os.path.exists(model_path):
