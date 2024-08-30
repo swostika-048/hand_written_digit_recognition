@@ -1,19 +1,19 @@
 import scipy.io
 import numpy as np
-# Visualization Function
+
 import matplotlib.pyplot as plt
 
 def load_data(file_path):
     data = scipy.io.loadmat(file_path)
     
-    # Extract and reshape the image data
-    images = data['data']  # Shape: (784, 70000)
-    images = images.T  # Transpose to shape (70000, 784)
-    images = images.reshape(-1, 28, 28).astype(np.float32) / 255.0  # Reshape to (70000, 28, 28) and normalize
     
-    # Extract and reshape the label data
-    labels = data['label']  # Shape: (1, 70000)
-    labels = np.squeeze(labels).astype(np.int64)  # Squeeze to shape (70000,)
+    images = data['data'] 
+    images = images.T 
+    images = images.reshape(-1, 28, 28).astype(np.float32) / 255.0 
+    
+    
+    labels = data['label']  
+    labels = np.squeeze(labels).astype(np.int64) 
     
     return images, labels
 
